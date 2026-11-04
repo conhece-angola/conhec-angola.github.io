@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="authe" content="Belson Quizomba Cateco">
+  <mata name="keywords" content="leia. Belson Quizomba, Bibiana mamãe">
+  <mata name="description" content="Jogo Angolano. Conhece Angola jogo de perguntas e respostas escolha o grupo da resposta do teu palpite. Site sem Fike News">  
+  <link rel="icon" sizes="32x32"  href="">
+    
+  <title>Conhece Angola</title>
+  
+  <style>
+  body{
+    font-family: 'Times New Roman', Times, serif;
+    background: black;
+    background-image: url("/raw1-1789723549766.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0px 100px 500px 0px;
+  }
+   #dix{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  display: none;
+  background-image: Linear-gradient(black,red,yellow);
+  width: 100%;
+  padding-bottom: 300px;
+  padding-top: 40px;
+  text-align: center;
+}
+#tema{
+  display: none;
+  text-indent: 8px;
+  color: #AEB42B;
+  padding-bottom: 50px;
+  background-image: linear-gradient(1deg,#E2201B,black);
+}
+#choco{
+  overflow: auto;
+  display: flex;
+  /*border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;*/
+  border-top: 2px solid #EEEF14;
+  border-bottom: 2px solid #EEEF14;
+  background: black;
+  color: antiquewhite;
+  max-width: 100%;
+}
+#choco button{
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  background: #080A1F;
+  color: white;
+  border: 2px solid black;
+  box-shadow: 0px 0px 20px white;
+}
+#segueA{
+  display: none;
+  text-indent: 8px;
+  color: #AEB42B;
+  padding-bottom: 50px;
+  background-image: linear-gradient(1deg,#E2201B,black);
+}
+#segueB{
+  display: none;
+}
+#segueC{
+  display: none;
+  color: ghostwhite;
+}
+#segueD{
+  display: none;
+  color: skyblue;
+}
+#segueE{
+  display: none;
+  color: skyblue;
+}
+#segueF{
+  display: none;
+  color: floralwhite;
+}
+#segueG{
+  display: none;
+  color: navajowhite;
+}
+#segueH{
+  display: none;
+  color: floralwhite;
+}
+#segueI{
+  display: none;
+  color: navajowhite;
+}
+#segueJ{
+  display: none;
+  color: floralwhite;
+}
+#button{
+  position: fixed;
+  bottom: 10%;
+  left: 2%;
+  width: 40%;
+  font-size: 20px;
+  height: 140px;
+  font-weight: bold;
+  background-image: url("/animação-botoa.gif");
+  background-size: cover;
+  border-radius: 500px;
+  border: 2px solid #8E5CC6;
+  font-style: italic;
+}
+#saia{
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  bottom: 4%;
+  width: 40%;
+  height: 140px;
+  font-weight: bold;
+  background-image: url("/animação-botoa.gif");
+  background-size: cover;
+  border-radius: 500px;
+  border: 2px solid #8E5CC6;
+  font-style: italic;
+  display: none;
+}
+#final{
+  display: none;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 200px whitesmoke;
+  margin: 100px 0px 0px 40px;
+  background: red;
+  height: 460px;
+  width: 80%;
+}
+.texto{
+  font-size: 100px;
+  margin-top: 10px;
+}
+.jogo{
+  color: white;
+  text-align: center;
+  background: #242635;
+  border-radius: 20px;
+}
+progress{
+  width: 100%;
+  height: 30px;
+  background:black;
+}
+#img1{
+  display: none;
+}
+#tempo{
+  display: none;
+  background: red; 
+  position: fixed; 
+  top: 0%; 
+  width: 100%;
+  left: 0%; 
+  text-align: center; 
+  height: 100%;
+}
+#login{
+  text-align: center;
+}
+#foto{
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0%;
+  height: 250px;
+}
+#fundo{
+  display: none;
+}
+#img1{
+  display: none;
+}
+#continua{
+  display: none;
+  position: fixed;
+  bottom: 0%; 
+  width: 100%;
+  left: 0%;
+  background: #2CBAC6;
+  padding-top: 20px;
+  text-align: center;
+}
+#continua a{
+  margin: auto auto;
+  display: block;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+#tempo{
+  
+}
+  </style>
+  
+  <script type="text/javascript" >
+
+  function som(){
+    setTimeout(function(){
+      fundo.style="display: inline-block; position: fixed; bottom: 0%; left: 0%;"
+      saia1.style="display: none;"
+      saiaimg.style="display: none;"
+      document.body.style="background-image: url('/5ceebb362fb247d7870ac9a830183444.gif'); background-size: cover; width: 100%; position: fixed; top: 0%;"
+     },3200)
+      setTimeout(function(){
+        fundo.style="display: none;"
+        document.body.style="background: #DCDDEA; background-image: url('/fundo_app.png'); background-size: cover; height: 100px;"
+        foto.style="display: inline-block;"
+      },7100)
+    }
+
+    som()
+  </script>
+  
+</head>
+<body>
+   
+   <div id="tempo">
+      <h1 style="text-align: center; margin-bottom: 50px; color: blue;">Tempo !</h1>
+      <h3>Tempo esgotado para continuar clique em <b style="color: blue;">Retornar</b>.</h3>
+      <h1 style="font-size: 100px;">🤮</h1>
+      <p style="padding: 30px 20px 30px 20px; background:#C6981F; border:; margin: 0px 30px 0px 30px; border: 2px double  #CCCCCA; border-radius: 30px;">Este Jogo é um <b style="color: white;">Software</b> De animação feito para Jogar diretamente dentro do meu site. <br>Este jogo funciona offline So precisas de baixar e abrir apenas uma vez com saldo de dados, de resto das vezes podes jogar dentro deste site sem saldo de dados. E sem uma ligação de dados móvel.</p>
+      <a style=" position: fixed; bottom: 1%; background:   #191D46; width: 100%; left: 0px; text-decoration: none; font-size: 20px; color: white; padding: 10px 0px 10px 0px; border-radius: 20px; border: 1px solid white;" href="repete_index.html">Retornar</a>
+   </div>,
+  
+   <img id="img1" src="/dbcceb8bf457436f94fbc64038b4c727.gif" width="100%" alt="">
+    
+  <div id="login">
+    <h1 id="saia1" style="text-align: center; color: white; font-size: 50px; background-image: url('/1790117472020.PNG'); background-size: cover; position: fixed; top: 0%; height: 220px; width: 100%;">Conheço Angola...</h1>
+    
+    <img id="saiaimg" style="position: fixed; bottom: 6%;" src="/9fcb8083931b45a092efa47e8ed97690.gif" width="30%" alt="">
+
+    <img id="fundo" src="/1790143994216.PNG" width="100%" height="500px" alt="">
+    <div id="foto">
+       <button id="button" onclick="jogar()" type="submit" ><b style="Color: red;  border: 10px solid black; border-radius: 100px; padding: 15px 10px 15px 10px; background-image: url(/a853df71b37c410fb10b2a3da2be8a0a.gif); background-size: cover; ">jogar</b></button>
+      
+      <img style="position: fixed; bottom: 30%;" src="/511142cc9cff4ecfb3baef364c4cd6fb.gif" width="50%" alt="">
+    </div>
+  </div>
+       
+    <div id="continua">
+      <a style="border: 2px solid antiquewhite; width: 80%; background: red; color: black; font-size: 20px; padding: 12px 0px 12px 0px; text-align: center; text-decoration: none;" href="index.html" >Carregar</a>
+      <a style="border: 2px solid antiquewhite; width: 80%; background: #1ADB1E ; color: black; padding: 12px 0px 12px 0px; text-align: center; text-decoration: none; font-size: 20px;" target="" href="nivel1.html">Next-02</a>
+    </div>
+  
+   <article id="dix">
+     <h3 style="color: white; display: none;" id="conta">0</h3>
+      <progress id="tempo1" value="100" max="100"></progress>
+      <progress style="display: none;" id="tempo2" value="100" max="100"></progress>
+      <progress style="display: none;"  id="tempo3" value="98" max="100"></progress>
+      <progress style="display: none;"  id="tempo4" value="96" max="100"></progress>
+      <progress style="display: none;"  id="tempo5" value="94" max="100"></progress>
+      <progress style="display: none;"  id="tempo6" value="92" max="100"></progress>
+      <progress style="display: none;"  id="tempo7" value="90" max="100"></progress>
+      <progress style="display: none;"  id="tempo8" value="88" max="100"></progress>
+      <progress style="display: none;"  id="tempo9" value="86" max="100"></progress>
+      <progress style="display: none;"  id="tempo10" value="84" max="100"></progress>
+      <progress style="display: none;"  id="tempo11" value="82" max="100"></progress>
+      <progress style="display: none;"  id="tempo12" value="80" max="100"></progress>
+      <progress style="display: none;"  id="tempo13" value="78" max="100"></progress>
+      <progress style="display: none;"  id="tempo14" value="76" max="100"></progress>
+      <progress style="display: none;"  id="tempo15" value="74" max="100"></progress>
+      <progress style="display: none;"  id="tempo16" value="72" max="100"></progress>
+      <progress style="display: none;"  id="tempo17" value="70" max="100"></progress>
+      <progress style="display: none;"  id="tempo18" value="68" max="100"></progress>
+      <progress style="display: none;"  id="tempo19" value="66" max="100"></progress>
+      <progress style="display: none;"  id="tempo20" value="64" max="100"></progress>
+      <progress style="display: none;" id="tempo21" value="62" max="100"></progress>
+      <progress style="display: none;"  id="tempo22" value="60" max="100"></progress>
+      <progress style="display: none;"  id="tempo23" value="58" max="100"></progress>
+      <progress style="display: none;"  id="tempo24" value="56" max="100"></progress>
+      <progress style="display: none;"  id="tempo25" value="54" max="100"></progress>
+      <progress style="display: none;"  id="tempo26" value="52" max="100"></progress>
+      <progress style="display: none;"  id="tempo27" value="50" max="100"></progress>
+      <progress style="display: none;"  id="tempo28" value="48" max="100"></progress>
+      <progress style="display: none;"  id="tempo29" value="46" max="100"></progress>
+      <progress style="display: none;"  id="tempo30" value="44" max="100"></progress>
+      <progress style="display: none;"  id="tempo31" value="42" max="100"></progress>
+      <progress style="display: none;"  id="tempo32" value="40" max="100"></progress>
+      <progress style="display: none;"  id="tempo33" value="38" max="100"></progress>
+      <progress style="display: none;"  id="tempo34" value="36" max="100"></progress>
+      <progress style="display: none;"  id="tempo35" value="34" max="100"></progress>
+      <progress style="display: none;"  id="tempo36" value="32" max="100"></progress>
+      <progress style="display: none;"  id="tempo37" value="30" max="100"></progress>
+      <progress style="display: none;"  id="tempo38" value="28" max="100"></progress>
+      <progress style="display: none;"  id="tempo39" value="26" max="100"></progress>
+      <progress style="display: none;" id="tempo40" value="24" max="100"></progress>
+      <progress style="display: none;"  id="tempo41" value="22" max="100"></progress>
+      <progress style="display: none;"  id="tempo42" value="20" max="100"></progress>
+      <progress style="display: none;"  id="tempo43" value="18" max="100"></progress>
+      <progress style="display: none;"  id="tempo44" value="16" max="100"></progress>
+      <progress style="display: none;"  id="tempo45" value="14" max="100"></progress>
+      <progress style="display: none;"  id="tempo46" value="12" max="100"></progress>
+      <progress style="display: none; color: red; background: red;"  id="tempo47" value="10" max="100"></progress>
+      <progress style="display: none; color: red; background: red;"  id="tempo48" value="8" max="100"></progress>
+      <progress style="display: none; color: red; background: red;"  id="tempo49" value="6" max="100"></progress>
+      <progress style="display: none; color: red; background: red;"  id="tempo50" value="4" max="100"></progress>
+      <progress style="display: none; color: red; background: red;"  id="tempo51" value="2" max="100"></progress>
+      <progress style="display: none; color: red; background: red;"  id="tempo52" value="0" max="100"></progress>
+
+      <div class="jogo">
+        <h1>Conheço Angola...</h1>
+      </div>
+
+      <div id="tema">
+        <h4 id="texto"></h4>
+        <div id="choco">
+           <button id="resposta1" onclick="vamoA()" type="submit"><p id="saida1"></p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="resposta2" onclick="vamoB()" type="submit"><p id="saida2"></p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="resposta3" onclick="vamoC()" type="submit"><p id="saida3"></p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="resposta4" onclick="vamoD()" type="submit"><p  id="saida4"></p></button>
+        </div>
+    </div>
+<!--segueA onde se encotra a segunda pergunta -->
+      <div id="segueA">
+          <h4>Qual foi o antigo presidente de Angola que faleceu no Ano:<p style="color: white;">2022</p> no dia:<p style="color: white;"> 08</p> e no mês de <p style="color: white;">Junho</p> idade: <p style="color: white;">79 anos</p></h4>
+  
+        <div id="choco">
+           <button id="respostA1" onclick="vamoAA()" type="submit"><p>Antônio Agostinho Neto</p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="respostA2" onclick="vamoBA()" type="submit"><p>José Eduardo dos Santos</p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="respostA3" onclick="vamoCA()" type="submit"><p>Eliane Da Conceição Cristóvão</p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="respostA4" onclick="vamoDA()" type="submit"><p>Emilio de Souza</p></button>
+        </div>
+    </div>
+      
+<!--segueB onde se encotra a segunda pergunta -->
+      <div id="segueB">
+          <h4 class="textoB" style="color: white;">Se Conheces Angola Respode estás lá. Qual é há Capital da cidade de Angola.</h4>
+  
+        <div id="choco">
+           <button id="respostB1" onclick="vamoAB()" type="submit"><p id="saida1">Benguela</p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="respostB2" onclick="vamoBB()" type="submit"><p id="saida2">África do sul</p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="respostB3" onclick="vamoCB()" type="submit"><p id="saida3">Calandula</p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="respostB4" onclick="vamoDB()" type="submit"><p id="saida4">Luanda</p></button>
+        </div>
+    </div> 
+    
+    <!--segueC onde se encotra a segunda pergunta -->
+    <div style="color: whitesmoke;" id="segueC">
+          <h4 class="">Sobre província de Angola.Onde fica localizado á floresta do maiobe?</h4>
+  
+        <div id="choco">
+           <button id="respostC1" onclick="vamoAC()" type="submit"><p>Madagáscar</p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="respostC2" onclick="vamoBC()" type="submit"><p>Malanje</p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="respostC3" onclick="vamoCC()" type="submit"><p>Cabinda</p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="respostC4" onclick="vamoDC()" type="submit"><p>Zaire</p></button>
+        </div>
+    </div> 
+    
+    <!--segueD onde se encotra a segunda pergunta -->
+    <div style="display: none;  color: whitesmoke;"  id="segueD">
+          <h4 class="">No começo em que passou a primeira reportagem do programa da Tv-Zimbo <p style="color: red;">Fala Angola.</p> Qual é o apresentador que fez abertura do Fala Angola.</h4>
+  
+        <div id="choco">
+           <button id="respostD1" onclick="vamoAD()" type="submit"><p>Saul Gonçalves</p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="respostD2" onclick="vamoBD()" type="submit"><p>Benvindo Magalhães</p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="respostD3" onclick="vamoCD()" type="submit"><p>Patrícia Várias</p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="respostD4" onclick="vamoDD()" type="submit"><p>Ernesto Bartolomeu</p></button>
+        </div>
+    </div> 
+    
+    <!--segueE onde se encotra a segunda pergunta -->
+    <div style="display: none; color: skyblue;"  id="segueE">
+          <h4 class=""><p style="color: white;">Luis Manuel da Fonseca Nunes</p> Qual é o Cargo que ele ocupa no governo Angolano.</h4>
+  
+        <div id="choco">
+           <button id="respostE1" onclick="vamoAE()" type="submit"><p>Governador da província de Luanda</p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="respostE2" onclick="vamoBE()" type="submit"><p>Regedor da Municipio de Calandula</p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="respostE3" onclick="vamoCE()" type="submit"><p>Ministro da saúde</p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="respostE4" onclick="vamoDE()" type="submit"><p>Administrador do Mulevo</p></button>
+        </div>
+    </div> 
+    
+    <!--segueF onde se encotra a segunda pergunta -->
+    <div style="display: none; color: whitesmoke;"  id="segueF">
+          <h4>De que província é o cantor Angolano Preto Show mais conhecido como <p style="color: white;">Benga</p></h4>
+  
+        <div id="choco">
+           <button id="respostF1" onclick="vamoAF()" type="submit"><p>Malanje</p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="respostF2" onclick="vamoBF()" type="submit"><p>Zaire</p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="respostF3" onclick="vamoCF()" type="submit"><p>Cabinda</p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="respostF4" onclick="vamoDF()" type="submit"><p>Soyo</p></button>
+        </div>
+    </div> 
+    
+    <!--segueG onde se encotra a segunda pergunta -->
+     <div style="display: none; color: whitesmoke;"  id="segueG">
+          <h4 class="">Quais são os artista que contaram a música <p style="color: white;">Atrás do ouro</p></h4>
+  
+        <div id="choco">
+           <button id="respostG1" onclick="vamoAG()" type="submit"><p>Naice zule</p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="respostG2" onclick="vamoBG()" type="submit"><p>Anderson Marion & Mano chaba</p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="respostG3" onclick="vamoCG()" type="submit"><p>Addiz abeda</p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="respostG4" onclick="vamoDG()" type="submit"><p>Rey do Amor</p></button>
+        </div>
+    </div> 
+      
+      <!--segueH onde se encotra a segunda pergunta -->
+      <div style="display: none; color: whitesmoke;"  id="segueH">
+          <h4 class="">O malogrado artista Nagrelha dos Lambas ele foi um artista muito reconhecido pelos angolanos. Ele era conhecido como:</h3>
+  
+        <div id="choco">
+           <button id="respostH1" onclick="vamoAH()" type="submit"><p>Rey maior do kuduro</p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="respostH2" onclick="vamoBH()" type="submit"><p>Presidente do kuduro</p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="respostH3" onclick="vamoCH()" type="submit"><p>Estado Maior do Kuduro</p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="respostH4" onclick="vamoDH()" type="submit"><p>A morte e o sono são filho do mesmo pai so que um não sabe brincar</p></button>
+        </div>
+    </div> 
+     <!--seguei onde se encotra a segunda pergunta -->
+      <div style="display: none; color: whitesmoke;"  id="segueI">
+          <h4 class="">Em que província o Primeiro Ex presidente de Angola nasceu.</h4>
+  
+        <div id="choco">
+           <button id="respostI1" onclick="vamoAI()" type="submit"><p>Bengo</p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="respostI2" onclick="vamoBI()" type="submit"><p>África do sul</p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="respostI3" onclick="vamoCI()" type="submit"><p>Guiné Bissau</p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="respostI4" onclick="vamoDI()" type="submit"><p>Luanda</p></button>
+        </div>
+    </div> 
+    <!--segueJ onde se encotra a segunda pergunta -->
+      <div style="display: none; color: whitesmoke;"  id="segueJ">
+          <h4 class="">A bandeira do direito (justiça) é constituído pôr que elementos.</h4>
+  
+        <div id="choco">
+           <button id="respostJ1" onclick="vamoAJ()" type="submit"><p>Balança ferro e pratos</p></button>
+        </div>
+            
+        <div  id="choco">
+            <button  id="respostJ2" onclick="vamoBJ()" type="submit"><p>Balança e os dois pratos</p></button>
+        </div>
+          
+         <div  id="choco">
+             <button id="respostJ3" onclick="vamoCJ()" type="submit"><p>uma mulher em pé em vola da água</p></button>
+         </div> 
+          
+        <div  id="choco">
+            <button id="respostJ4" onclick="vamoDN()" type="submit"><p>prato de ouro e símbolo</p></button>
+        </div>
+    </div> 
+    
+    </article>
+    
+    
+    <script src=""></script>
+    <script src="nivel.js"></script>
+    
+      <!-- POPUP AUTOMÁTICO DE INSTALAÇÃO -->
+<div id="installPopup" style="display:none; position:fixed; bottom:0; left:0; right:0; background:#111; color:#fff; padding:20px; z-index:9999; text-align:center; border-top:3px solid #00ff88;">
+  <p style="margin:0 0 10px 0; font-size:16px; font-weight:bold;">📲 Instala o App Belson Software</p>
+  <p style="margin:0 0 15px 0; font-size:13px;">Acesso rápido e funciona sem internet!</p>
+  <button id="btnInstall" style="background:#00ff88; color:#000; border:none; padding:12px 25px; border-radius:8px; font-weight:bold; font-size:15px; width:80%;">INSTALAR AGORA</button>
+  <button id="btnClose" style="background:transparent; color:#aaa; border:none; margin-top:10px; font-size:12px;">Depois</button>
+</div>
+
+<script>
+
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  // Mostra o popup automaticamente 2 segundos depois que entrar
+  setTimeout(() => {
+    document.getElementById('installPopup').style.display = 'block';
+  }, 2000);
+});
+
+document.getElementById('btnInstall').addEventListener('click', async () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log(outcome);
+    deferredPrompt = null;
+    document.getElementById('installPopup').style.display = 'none';
+  }
+});
+
+document.getElementById('btnClose').addEventListener('click', () => {
+  document.getElementById('installPopup').style.display = 'none';
+});
+
+  /* Esta Função que foi chamado sera para que escolha se continuar ou volta*/
+  
+function volta(){
+  let foto = document.getElementById('foto');
+  let dix = document.getElementById('dix');
+  let cont = document.getElementById('continua');
+  let botao = document.getElementById('button');
+  
+  cont.style="display: inline-block;"
+  setTimeout(function(){
+    dix.style="display: none;"
+    foto.style="display: inline-block;"
+    botao.style="display: inline-block;"
+  },400)
+}
+</script>
+    
+</body>
+</html>
